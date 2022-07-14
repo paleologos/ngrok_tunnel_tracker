@@ -69,7 +69,7 @@ Other two files are app_tracker_descriptive_srb.py and app_tracker_descriptive_e
 
 
 
-INSTALLATION
+CONFIGURATION AND INSTALLATION
 
 First al all, you need to configure email adresses in main application file - app_tracker.py
 Inside function you should type correct email of the sender, and google application password , generated on your google account(earlier you could used option "enable less secure apps", but for security reasons it's depracticated, and supstituted with application password). Also you should type in correct reciever email address.
