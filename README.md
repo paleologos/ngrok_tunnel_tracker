@@ -27,9 +27,17 @@ Glavni fajl je app_tracker.py, on je minimalni fajl, od koga se kreira linux ser
 Ostala dva fajla app_tracker_descriptive_srb.py i app_tracker_descriptive_eng.py su fajlovi za otklanjanje gresaka i testiranje koda, posto sadrze print() funkcije i komentare, za razliku od glavnog aplikativnog fajla koji je minimalan.
 
 
-INSTALACIJA
+KONFIGURACIJA I INSTALACIJA
 
-Najpre je neophodno dodeliti pravo egzekucije fajlu create-service.sh
+Najpre je neophodno konfigurisati email adrese u glavnom fajlu app_tracker.py
+Unutar funkcije je potrebno uneti email posiljaoca, aplikativnu lozinku generisanu na google nalogu (koja je zamena za nekada opciju less secure apps), kao i email primaoca
+ 
+    sender_address = 'SENDER@gmail.com'
+    sender_pass = 'GOOGLE APPLICATION PASWORD'
+    receiver_address = 'RECIEVER@gmail.com'
+
+
+Nakon ovoga neophodno je dodeliti pravo egzekucije fajlu create-service.sh
 
 sudo chmod +x create-service.sh
 
@@ -63,7 +71,16 @@ Other two files are app_tracker_descriptive_srb.py and app_tracker_descriptive_e
 
 INSTALLATION
 
-First, at all, you should give execution permision to the file create-service.sh
+First al all, you need to configure email adresses in main application file - app_tracker.py
+Inside function you should type correct email of the sender, and google application password , generated on your google account(earlier you could used option "enable less secure apps", but for security reasons it's depracticated, and supstituted with application password). Also you should type in correct reciever email address.
+
+    sender_address = 'SENDER@gmail.com'
+    sender_pass = 'GOOGLE APPLICATION PASWORD'
+    receiver_address = 'RECIEVER@gmail.com'
+    
+    
+
+After that, you should give execution permision to the file create-service.sh
 
 sudo chmod +x create-service.sh
 
