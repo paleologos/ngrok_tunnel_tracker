@@ -5,9 +5,10 @@ echo "========================================================="
 read -p "Press enter to continue / Pritisnite Enter da bi ste nastavili:  "
 sleep 1 
 sudo apt update -y
+sudo apt upgrade -y
 
 echo "========================================================="
-echo "Installing Nodejs and NPM "
+echo "Installing curl "
 echo "========================================================="
 read -p "Press enter to continue / Pritisnite Enter da bi ste nastavili:  "
 sleep 1 

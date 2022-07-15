@@ -37,11 +37,14 @@ Unutar funkcije je potrebno uneti email posiljaoca, aplikativnu lozinku generisa
     receiver_address = 'RECIEVER@gmail.com'
 
 
-Nakon ovoga neophodno je dodeliti pravo egzekucije fajlu create-service.sh
+Nakon ovoga neophodno je dodeliti pravo egzekucije fajlu installer.sh create-service.sh 
 
+sudo chmod +x installer.sh
 sudo chmod +x create-service.sh
 
-Nakon ovoga pokrenuti fajl create-service.sh . Ovaj fajl ce na osnovu glavnog aplikativnog fajla app_tracker.py kreirati linux servis, pokrenuti ga, testirati ga, i omoguciti njegovo automatsko pokretanje sa pokretanjem sistema,
+Nakon ovoga pokrenuti fajl installer.sh i sacekati da zavrsi azuriranja sistema i instalira curl, ukoliko nije instaliran, zatim pokrenuti create-service.sh . Ovaj fajl (create-service.sh) ce na osnovu glavnog aplikativnog fajla app_tracker.py kreirati linux servis, pokrenuti ga, testirati ga, i omoguciti njegovo automatsko pokretanje sa pokretanjem sistema,
+
+./installer.sh
 
 ./create-service.sh
 
@@ -80,12 +83,16 @@ Inside function you should type correct email of the sender, and google applicat
     
     
 
-After that, you should give execution permision to the file create-service.sh
+After that, you should give execution permision to the files installer.sh and create-service.sh
+
+sudo chmod +x installer.sh
 
 sudo chmod +x create-service.sh
 
 
-After that, you should run create-service.sh . This file will create linux service based on the app-tracker.py, automaticaly start that service, test (give status of that service), and enables it on boot.
+After that, you should run installer.sh to update your system and install curl, if it isn't installed, and after that,  create-service.sh . This file (create-service.sh ) will create linux service based on the app-tracker.py, automaticaly start that service, test (give status of that service), and enables it on boot.
+
+./installer.sh
 
 ./create-service.sh
 
